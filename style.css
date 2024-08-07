@@ -1,0 +1,35 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Light cyan background */
+    color: #333; /* Dark text color */
+}
+
+/* Header styles */
+header {
+    background-color: #00796b; /* Teal header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #004d40; /* Darker teal for navigation */
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+nav li {
+    margin: 0 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color

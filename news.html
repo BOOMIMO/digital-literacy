@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - DigitalLearnHub</title>
+    <style>
+        /* Resetting default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Light cyan background */
+            color: #333; /* Dark text color */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #00796b; /* Teal header */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #004d40; /* Darker teal for navigation */
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #26a69a; /* Lighter teal on hover */
+            border-radius: 5px;
+        }
+
+        /* Main content styles */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White background for sections */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Limit width for better readability */
+        }
+        section h2 {
+            color: #00796b; /* Teal heading */
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #4caf50; /* Green button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .popup-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #004d40; /* Darker teal for footer */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>News</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Latest News</h2>
+            <button id="newsButton">Check for New Events</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 DigitalLearnHub. All rights reserved.</p>
+    </footer>
+    
+    <!-- Popup for News -->
+    <div id="newsPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>New Event Announcement</h2>
+            <p>We are excited to announce a new event for our digital literacy community. Stay tuned for more details!</p>
+        </div>
+    </div>
+
+    <script>
+        // Show popup when the news button is clicked
+        document.getElementById('newsButton').onclick = function() {
+            document.getElementById('newsPopup').style.display = 'block';
+        }
+        
+        // Close popup when close button is clicked or outside the popup is clicked
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('newsPopup')) {
+                document.getElementById('newsPopup').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
